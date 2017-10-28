@@ -13,9 +13,9 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
-@Configuration //вказує, що даний клас є Spring конфігурацією
-@EnableWebMvc // еквівалент mvc керуює анотацією в XML
-@ComponentScan(basePackages = "com.websystique.springmvc") // вказує Spring де потрібно шукати Beans
+@Configuration //indicates that this class is a Spring configuration
+@EnableWebMvc // equivalent mvc manages the annotation in XML
+@ComponentScan(basePackages = "com.websystique.springmvc") // specifies Spring to look for Beans
 public class AppConfig {
 	
 	@Bean

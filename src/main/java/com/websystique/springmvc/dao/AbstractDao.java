@@ -1,5 +1,5 @@
-//Цей універсальний клас є базовим класом для всіх класів реалізації DAO.
-//Він надає методи обгортки для спільних hibernate operations
+//This generic class is the base class for all DAO implementation classes.
+//It provides methods wrappers for joint operations hibernate
 
 package com.websystique.springmvc.dao;
  

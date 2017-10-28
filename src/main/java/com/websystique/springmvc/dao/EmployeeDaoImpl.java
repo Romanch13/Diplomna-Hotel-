@@ -11,10 +11,10 @@ import com.websystique.springmvc.model.Employee;
 @Repository("employeeDao")
 public class EmployeeDaoImpl extends AbstractDao<Integer, Employee> implements EmployeeDao {
     public Employee findById(int id) {
-        return getByKey(id); // повертає ID 
+        return getByKey(id); 
     }
     public void saveEmployee(Employee employee) {
-        persist(employee); // зберігається (працівники)
+        persist(employee); 
     }
     public void deleteEmployeeBySsn(String ssn) {
         Query query = getSession().createSQLQuery("delete from Employee where ssn = :ssn");

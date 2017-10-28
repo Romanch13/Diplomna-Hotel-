@@ -16,10 +16,10 @@ import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-@Configuration //вказує, що даний клас є Spring конфігурацією
-@EnableTransactionManagement //включає TransactionManager для управління транзакціями БД
-@ComponentScan({ "com.websystique.springmvc.configuration" }) //вказуємо Spring де потрібно шукати Entity, DAO, Service і под .
-@PropertySource(value = { "classpath:application.properties" }) //підключаємо файл властивостей створений вище
+@Configuration //indicates that this class is a Spring configuration
+@EnableTransactionManagement //includes TransactionManager for transaction management database
+@ComponentScan({ "com.websystique.springmvc.configuration" }) //specify Spring where to find the Entity, DAO, Service and under
+@PropertySource(value = { "classpath:application.properties" }) //the plug-in properties file created above
 
 	public class HibernateConfiguration {
 	

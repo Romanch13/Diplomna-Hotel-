@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 //import websystiqu.springframework
 import com.websystique.springmvc.model.Employee;
 import com.websystique.springmvc.service.EmployeeService;
-@Controller //вказує на те, що цей клас є головним, який обробляє запити з шаблоном, позначеним @ RequestMapping
+@Controller //indicates that this is the main class that handles the queries with the template marked with @ RequestMapping
 @RequestMapping("/") 
 public class AppController {
  
@@ -29,7 +29,7 @@ public class AppController {
     MessageSource messageSource;
  
     /*
-     * Цей метод показує список усіх існуючих працівників.
+     * This method shows the list of all existing employees.
      */
     @RequestMapping(value = { "/", "/list" }, method = RequestMethod.GET)
     public String listEmployees(ModelMap model) {
@@ -39,7 +39,7 @@ public class AppController {
     }
  
     /*
-     * Цей метод забезпечить середовище для додавання нового співробітника.
+     * This method will provide a medium for adding a new employee.
      */
     @RequestMapping(value = { "/new" }, method = RequestMethod.GET)
     public String newEmployee(ModelMap model) {
@@ -50,8 +50,8 @@ public class AppController {
     }
  
     /*
-     * Цей метод буде викликаний під час подання форми, обробки запиту POST 
-     * для збереження співробітника в базі даних. Він також перевіряє введення користувача
+     * This method will be called during form submission, processing a POST request 
+     * to save the employee in database. It also validates the user input
      */
     @RequestMapping(value = { "/new" }, method = RequestMethod.POST)
     public String saveEmployee(@Valid Employee employee, BindingResult result,
@@ -61,11 +61,11 @@ public class AppController {
         }
  
         /*
-         * Переважним способом досягнення унікальності поля [ssn] має бути реалізованим за допомогою спеціальною
-         * анотацією @Unique та застосовує її у полі [ssn] класу Модель [Employee].
+         * A primary method of achieving uniqueness of the field [ssn] must be implemented with special
+         * annotated with @Unique and applies it in the field [ssn] class Model [Employee].
          * 
-         * Нижче представлено код в [if block] він демонструє те що можна заповнити власні помилки за межами системи (validation)
-         * а також при  цьому використовувати багатомовні повідомлення
+         * Below is the code in the [if block] because it demonstrates that you can fill with your own errors outside of the system (validation)
+         * and also to using  internationalized messages
          * 
          */
         if(!service.isEmployeeSsnUnique(employee.getId(), employee.getSsn())){
@@ -82,7 +82,7 @@ public class AppController {
  
  
     /*
-     * Цей метод оновлює дані існуючого працівника.
+     * This method will provide the medium to update an existing employee.
      */
     @RequestMapping(value = { "/edit-{ssn}-employee" }, method = RequestMethod.GET)
     public String editEmployee(@PathVariable String ssn, ModelMap model) {
@@ -93,8 +93,9 @@ public class AppController {
     }
      
     /*
-     * Цей метод буде викликатися при відправці форми, обробки за запитом після оновлення співробітників в базі даних.
-     * Він також перевіряє введення користувача
+     *
+     * This method will be called on form submission, handling POST request for
+     * updating employee in database. It also validates the user input
      */
     @RequestMapping(value = { "/edit-{ssn}-employee" }, method = RequestMethod.POST)
     public String updateEmployee(@Valid Employee employee, BindingResult result,
@@ -118,7 +119,7 @@ public class AppController {
  
      
     /*
-     * Цей метод буде видаляти працівника за його значенням SSN.
+     * This method will delete an employee by it's SSN value.
      */
     @RequestMapping(value = { "/delete-{ssn}-employee" }, method = RequestMethod.GET)
     public String deleteEmployee(@PathVariable String ssn) {

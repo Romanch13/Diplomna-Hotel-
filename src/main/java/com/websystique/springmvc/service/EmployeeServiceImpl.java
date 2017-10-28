@@ -25,9 +25,9 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
  
     /*
-     * Оскільки метод запускається з транзакцією, то не потрібно викликати оновлення hibernate.
-     * Завантаження об'єкту з БД та оновлення його з потрібними значеннями в транзакції.
-     * Оновлення буде відбуватись в БД після завершення операції. 
+    * Because the method runs with a transaction, you do not need to call hibernate update.
+    * Load the object from DB and update it with the desired values in the transaction.
+    * Will be updated in the database after the operation is completed. 
      */
     public void updateEmployee(Employee employee) {
         Employee entity = dao.findById(employee.getId());
