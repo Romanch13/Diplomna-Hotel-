@@ -1,5 +1,4 @@
 package com.websystique.springmvc.controller;
-
 // import java util
 import java.util.List;
 import java.util.Locale;
@@ -18,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 //import websystiqu.springframework
 import com.websystique.springmvc.model.Employee;
 import com.websystique.springmvc.service.EmployeeService;
+
 @Controller //indicates that this is the main class that handles the queries with the template marked with @ RequestMapping
 @RequestMapping("/") 
 public class AppController {
@@ -33,6 +33,7 @@ public class AppController {
      */
     @RequestMapping(value = { "/", "/list" }, method = RequestMethod.GET)
     public String listEmployees(ModelMap model) {
+    	
         List<Employee> employees = service.findAllEmployees();
         model.addAttribute("employees", employees);
         return "allemployees";
@@ -56,6 +57,7 @@ public class AppController {
     @RequestMapping(value = { "/new" }, method = RequestMethod.POST)
     public String saveEmployee(@Valid Employee employee, BindingResult result,
             ModelMap model) {
+    	
         if (result.hasErrors()) {
             return "registration";
         }
@@ -93,7 +95,6 @@ public class AppController {
     }
      
     /*
-     *
      * This method will be called on form submission, handling POST request for
      * updating employee in database. It also validates the user input
      */
