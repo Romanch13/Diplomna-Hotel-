@@ -55,7 +55,7 @@
 						<c:when test="${edit}">
 							<input type="submit" value="Update"/>
 						</c:when>
-						<c:otherwise>
+						<c:otherwise >
 							<input type="submit" value="Register"/>
 						</c:otherwise>
 					</c:choose>

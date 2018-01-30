@@ -12,21 +12,20 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
-
 @Entity
-@Table(name = "TYPES_OF_ROOMS",catalog = "springmvc")
-public class types_of_rooms {
+@Table(name = "ADDITIONAL_SERVICES",catalog = "springmvc")
+public class additional_services{
 	
 	@Id
 	@GeneratedValue (strategy = GenerationType.AUTO)
-	@Column(name = "ROOMS_ID")
-	private long roomsId;
+	@Column(name = "SERVICES_ID")
+	private int servicesId;
 	
-	@Column(name ="TYPE_ROOMS")
-	private String type_rooms;
+	@Column(name ="ADDITIONAL_SERVICES")
+	private String additionalServices;
 	
 	@ManyToOne(optional = false)
-	@JoinColumn(name = "TYPE_ROOMS")
+	@JoinColumn(name = "ADDITIONAL_SERVICES")
 	private Guests guests;
 	
 	public Guests getGuests () {
@@ -36,25 +35,24 @@ public class types_of_rooms {
 		this.guests = guests;
 	}
 	
-	public long getRoomsId() {
-		return roomsId;
+	public int getServicesId() {
+		return servicesId;
 	}
 	
-	public void setRoomsId (long roomsId) {
-		this.roomsId = roomsId;
+	public void setServicesIdd (int servicesId) {
+		this.servicesId = servicesId;
 	}
 	
-	public String getType_rooms() {
-		return type_rooms;
+	public String getAdditionalServices() {
+		return additionalServices;
 	}
 	
-	public void setType_rooms(String type_rooms) {
-		this.type_rooms = type_rooms;
+	public void setSpendingTypes(String additionalServices) {
+		this.additionalServices = additionalServices;
 	}
 
 	@Override
 	public String toString() {
-		return "types_of_rooms [roomsId=" + roomsId + ", type_rooms = " + type_rooms +"]";
+		return "additional_services [servicesId=" + servicesId + ", additionalServices = " + additionalServices +"]";
 	}
 }
-
