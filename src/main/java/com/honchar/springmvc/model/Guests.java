@@ -37,6 +37,9 @@ public class Guests{
 	@Column(name = "TYPE_ROOMS")
 	private String type_rooms;
 	
+	@Column(name = "NUMBER_ROOM")
+	private int number_room;
+	
 	@Column(name = "ADDITIONAL_SERVICES")
 	private String additionalServices;
 	
@@ -83,12 +86,13 @@ public class Guests{
 		
 	}
 	
-	public Guests(String surname, String name, String type_rooms, String additionalServices, 
+	public Guests(String surname, String name, String type_rooms, int number_room, String additionalServices, 
 			String spendingTypes, int number_phone,String payment,String type_cards,
 			int number_cards, BigDecimal amount_payment, Date date) {
 		this.surname = surname;
 		this.name = name;
 		this.type_rooms = type_rooms;
+		this.number_room = number_room;
 		this.additionalServices = additionalServices; 
 		this.spendingTypes = spendingTypes;
 		this.number_phone = number_phone;
@@ -125,6 +129,13 @@ public class Guests{
 	}
 	public void setType_rooms(String type_rooms) {
 		this.type_rooms = type_rooms;
+	}
+	
+	public int getNumber_room() {
+		return number_room;
+	}
+	public void setNumber_room(int number_room) {
+		this.number_room = number_room;
 	}
 	
 	public String getAdditionalServices() {
