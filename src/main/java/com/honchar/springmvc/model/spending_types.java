@@ -1,5 +1,6 @@
 package com.honchar.springmvc.model;
 
+import java.io.Serializable;
 import java.util.List;
 import javax.persistence.*;
 import javax.persistence.Column;
@@ -14,7 +15,7 @@ import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "SPENDING_TYPES",catalog = "springmvc")
-public class spending_types {
+public class spending_types implements Serializable{
 	
 	@Id
 	@GeneratedValue (strategy = GenerationType.AUTO)
@@ -22,10 +23,10 @@ public class spending_types {
 	private int spendingId;
 	
 	@Column(name ="SPENDING_TYPES")
-	private String spendingTypes;
+	private String spending_Types;
 	
 	@ManyToOne(optional = false)
-	@JoinColumn(name = "SPENDING_TYPES")
+	@JoinColumn(name = "SPENDING_TYPES", referencedColumnName = "SPENDING_TYPES", insertable = false, updatable = false)
 	private Guests guests;
 	
 	public Guests getGuests () {
@@ -43,16 +44,16 @@ public class spending_types {
 		this.spendingId = spendingId;
 	}
 	
-	public String getSpendingTypes() {
-		return spendingTypes;
+	public String getSpending_Types() {
+		return spending_Types;
 	}
 	
-	public void setSpendingTypes(String spendingTypes) {
-		this.spendingTypes = spendingTypes;
+	public void setSpending_Types(String spending_Types) {
+		this.spending_Types = spending_Types;
 	}
 
 	@Override
 	public String toString() {
-		return "spendingtypes [spendingId=" + spendingId + ", spendingTypes = " + spendingTypes +"]";
+		return "spendingtypes [spendingId=" + spendingId + ", spendingTypes = " + spending_Types +"]";
 	}
 }

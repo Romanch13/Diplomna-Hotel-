@@ -1,5 +1,6 @@
 package com.honchar.springmvc.model;
 
+import java.io.Serializable;
 import java.util.List;
 import javax.persistence.*;
 import javax.persistence.Column;
@@ -15,7 +16,7 @@ import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "TYPES_OF_ROOMS",catalog = "springmvc")
-public class types_of_rooms {
+public class types_of_rooms implements Serializable {
 	
 	@Id
 	@GeneratedValue (strategy = GenerationType.AUTO)
@@ -26,7 +27,7 @@ public class types_of_rooms {
 	private String type_rooms;
 	
 	@ManyToOne(optional = false)
-	@JoinColumn(name = "TYPE_ROOMS")
+	@JoinColumn(name = "TYPE_ROOMS", referencedColumnName = "TYPE_ROOMS", insertable = false, updatable = false)
 	private Guests guests;
 	
 	public Guests getGuests () {

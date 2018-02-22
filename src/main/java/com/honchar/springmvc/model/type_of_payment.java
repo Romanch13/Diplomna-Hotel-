@@ -1,5 +1,6 @@
 package com.honchar.springmvc.model;
 
+import java.io.Serializable;
 import java.util.List;
 import javax.persistence.*;
 import javax.persistence.Column;
@@ -14,7 +15,7 @@ import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "TYPE_OF_PAYMENT",catalog = "springmvc")
-public class type_of_payment {
+public class type_of_payment  implements Serializable{
 	
 	@Id
 	@GeneratedValue (strategy = GenerationType.AUTO)
@@ -25,7 +26,7 @@ public class type_of_payment {
 	private String payment;
 	
 	@ManyToOne(optional = false)
-	@JoinColumn(name = "PAYMENT")
+	@JoinColumn(name = "PAYMENT", referencedColumnName = "PAYMENT", insertable = false, updatable = false)
 	private Guests guests;
 	
 	public Guests getGuests () {

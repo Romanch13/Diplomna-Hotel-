@@ -5,21 +5,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Сторінка підтвердження реєстрації</title>
-
-<style>
-
-	body {
-		font-family: sans-serif;}
-	a{
-		text-decoration: none;}
-</style>
+<title>Registration Confirmation Page</title>
 </head>
 <body>
 	message : ${success}
 	<br/>
 	<br/>
-	 Повернутися до <a href="<c:url value='/list' />">Списку всіх Гостей</a>
+	 Go back to <a href="<c:url value='/list' />">List of All Guests</a>
 	
 </body>
 

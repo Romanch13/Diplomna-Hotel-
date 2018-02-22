@@ -1,5 +1,6 @@
 package com.honchar.springmvc.model;
 
+import java.io.Serializable;
 import java.util.List;
 import javax.persistence.*;
 import javax.persistence.Column;
@@ -14,18 +15,18 @@ import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "ADDITIONAL_SERVICES",catalog = "springmvc")
-public class additional_services{
+public class additional_services implements Serializable{
 	
 	@Id
 	@GeneratedValue (strategy = GenerationType.AUTO)
 	@Column(name = "SERVICES_ID")
 	private int servicesId;
 	
-	@Column(name ="ADDITIONAL_SERVICES")
-	private String additionalServices;
+	@Column(name ="ADDITIONAL_SERVICE")
+	private String additional_Service;
 	
 	@ManyToOne(optional = false)
-	@JoinColumn(name = "ADDITIONAL_SERVICES")
+	@JoinColumn(name = "ADDITIONAL_SERVICE", referencedColumnName = "ADDITIONAL_SERVICE", insertable = false, updatable = false)
 	private Guests guests;
 	
 	public Guests getGuests () {
@@ -39,20 +40,20 @@ public class additional_services{
 		return servicesId;
 	}
 	
-	public void setServicesIdd (int servicesId) {
+	public void setServicesId (int servicesId) {
 		this.servicesId = servicesId;
 	}
 	
-	public String getAdditionalServices() {
-		return additionalServices;
+	public String getAdditional_Service() {
+		return additional_Service;
 	}
 	
-	public void setSpendingTypes(String additionalServices) {
-		this.additionalServices = additionalServices;
+	public void AdditionalService(String additional_Service) {
+		this.additional_Service = additional_Service;
 	}
 
 	@Override
 	public String toString() {
-		return "additional_services [servicesId=" + servicesId + ", additionalServices = " + additionalServices +"]";
+		return "additional_service [servicesId=" + servicesId + ", additionalService = " + additional_Service +"]";
 	}
 }
