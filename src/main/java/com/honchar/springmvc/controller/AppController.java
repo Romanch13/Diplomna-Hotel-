@@ -15,14 +15,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 
 import com.honchar.springmvc.model.Guests;
-import com.honchar.springmvc.service.GuestsService;
+import com.honchar.springmvc.service.GuestsService1;
 
 @Controller
 @RequestMapping("/")
 public class AppController {
 	
 	@Autowired
-	GuestsService service;
+	GuestsService1 service;
 	
 	@Autowired
 	MessageSource messageSource;
@@ -51,50 +51,50 @@ public class AppController {
 			return "registration";
 		}
 		
-		if(!service.isGuestsPaymentUinque(guests.getId(), guests.getPayment())) {
-			FieldError paymentError = new FieldError("guests","payment", messageSource.getMessage("non.uique.payment", new String[] {guests.getPayment()}, Locale.getDefault()));
-			result.addError(paymentError);
+		if(!service.isGuestsIdUinque(guests.getId())) {
+			FieldError idError = new FieldError("guests","id", messageSource.getMessage("non.uique.id", new Integer[] {guests.getId()}, Locale.getDefault()));
+			result.addError(idError);
 			return "registration";
 		}
 		
 		service.saveGuests(guests);
-		model.addAttribute("success", "Guests " + guests.getName() + " registered successfully");
+		model.addAttribute("success", "Новий Гість " + guests.getName() + " registered successfully");
 		return "success";
 		
 	}
 	
-	@RequestMapping(value =  { "/edit-{payment}-guests" }, method = RequestMethod.GET)
-	public String editGuests(@PathVariable String payment, ModelMap model) {
-		Guests guests = service.findGuestsByPayment(payment);
+	@RequestMapping(value =  { "/edit-{id}-guests" }, method = RequestMethod.GET)
+	public String editGuests(@PathVariable int id, ModelMap model) {
+		Guests guests = service.findGuestsById(id);
 		model.addAttribute("guests", guests);
 		model.addAttribute("edit", true);
 		return "registration";
 	}
 	
-	@RequestMapping(value =  { "/edit-{payment}-guests" }, method = RequestMethod.POST)
+	@RequestMapping(value =  { "/edit-{id}-guests" }, method = RequestMethod.POST)
 	public String updateGuests(@Valid Guests guests, BindingResult result,
-			ModelMap model, @PathVariable String payment) {
+			ModelMap model, @PathVariable int id) {
 		
 		if (result.hasErrors()) {
 			return "registration";
 		}
 		
-		if(!service.isGuestsPaymentUinque(guests.getId(), guests.getPayment())) {
-			FieldError paymentError = new FieldError("guests","payment", messageSource.getMessage("non.uique.payment", new String[] {guests.getPayment()}, Locale.getDefault()));
-			result.addError(paymentError);
+		if(!service.isGuestsIdUinque(guests.getId())) {
+			FieldError idError = new FieldError("guests","id", messageSource.getMessage("non.uique.id", new Integer[] {guests.getId()}, Locale.getDefault()));
+			result.addError(idError);
 			return "registration";
 		}
 		
 		service.updateGuests(guests);
 		
-		model.addAttribute("success", "Guests " + guests.getName() + " update successfully");
+		model.addAttribute("success", "Новий Гість " + guests.getName() + " update successfully");
 		return "success";
 
 	}
 	
-	@RequestMapping(value = { "/delete-{payment}-guests"}, method =  RequestMethod.GET)
-	public String deleteGuests(@PathVariable String payment) {
-		service.deleteGuestsByPayment(payment);
+	@RequestMapping(value = { "/delete-{id}-guests"}, method =  RequestMethod.GET)
+	public String deleteGuests(@PathVariable int id) {
+		service.deleteGuestsById(id);
 		return "redirect:/list";
 	}
 	

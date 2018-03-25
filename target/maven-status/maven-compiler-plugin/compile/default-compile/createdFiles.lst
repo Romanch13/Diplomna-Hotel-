@@ -1,9 +1,8 @@
-com\honchar\springmvc\service\GuestsServiceImpl.class
 com\honchar\springmvc\dao\AbstractDao.class
 com\honchar\springmvc\configuration\HibernateConfiguration.class
-com\honchar\springmvc\service\GuestsService.class
-com\honchar\springmvc\dao\GuestsDao.class
+com\honchar\springmvc\service\GuestsService1.class
 com\honchar\springmvc\configuration\AppConfig.class
+com\honchar\springmvc\dao\GuestsDao1.class
 com\honchar\springmvc\model\Guests.class
 com\honchar\springmvc\model\type_of_cards.class
 com\honchar\springmvc\model\types_of_rooms.class
@@ -11,5 +10,7 @@ com\honchar\springmvc\model\spending_types.class
 com\honchar\springmvc\model\additional_services.class
 com\honchar\springmvc\configuration\AppInitializer.class
 com\honchar\springmvc\controller\AppController.class
-com\honchar\springmvc\dao\GuestsDaoImpl.class
+com\honchar\springmvc\service\GuestsServiceImpl1.class
+com\honchar\springmvc\configuration\EncodingFilter.class
+com\honchar\springmvc\dao\GuestsDaoImpl1.class
 com\honchar\springmvc\model\type_of_payment.class

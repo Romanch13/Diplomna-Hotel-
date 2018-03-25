@@ -2,12 +2,13 @@
     pageEncoding="utf-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
 
 <html>
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>Реэстрація Гостей</title>
+	<title>Реєстрація Гостей</title>
 
 <style>
 
@@ -24,7 +25,7 @@
 
 <body>
 
-	 <h2>Реєстрація Форма</h2>
+	 <h2>Реєстраційна Форма</h2>
  
     <form:form method="POST" modelAttribute="guests">
         <form:input type="hidden" path="id" id="id"/>
