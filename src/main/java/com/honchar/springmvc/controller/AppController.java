@@ -58,7 +58,7 @@ public class AppController {
 		}
 		
 		service.saveGuests(guests);
-		model.addAttribute("success", "Новий Гість " + guests.getName() + " registered successfully");
+		model.addAttribute("success", guests.getSurname() + " " + guests.getName() + " успішно зареєстрований");
 		return "success";
 		
 	}
@@ -87,7 +87,7 @@ public class AppController {
 		
 		service.updateGuests(guests);
 		
-		model.addAttribute("success", "Новий Гість " + guests.getName() + " update successfully");
+		model.addAttribute("success", guests.getSurname() + " " +  guests.getName() + " дані оновлено");
 		return "success";
 
 	}

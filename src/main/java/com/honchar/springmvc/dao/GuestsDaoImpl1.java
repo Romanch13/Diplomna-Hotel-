@@ -8,6 +8,7 @@ import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 import com.honchar.springmvc.model.*;
 
+
 @Repository("guestsDao1")
 public class  GuestsDaoImpl1 extends AbstractDao<Integer, Guests> implements GuestsDao1 {
 	public Guests findById (int id) {
@@ -20,7 +21,9 @@ public class  GuestsDaoImpl1 extends AbstractDao<Integer, Guests> implements Gue
 		Query query = getSession().createSQLQuery("delete from Guests where id = :id");
 		query.setInteger("id", id);
 		query.executeUpdate();
+		
 	}
+	 
 	@SuppressWarnings("unchecked")
 	public List<Guests> findAllGuests() {
 		Criteria criteria = createEntityCriteria();

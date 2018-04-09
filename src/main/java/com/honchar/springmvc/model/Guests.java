@@ -21,6 +21,8 @@ import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+
+
 import org.springframework.format.annotation.DateTimeFormat;
 
 
@@ -31,6 +33,8 @@ public class Guests implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
+	@NotNull
+	@Size(min=3, max=50)
 	@Column(name = "SURNAME")
 	private String surname;
 	
@@ -38,21 +42,27 @@ public class Guests implements Serializable{
 	@Column(name = "NAME")
 	private String name;
 	
+	@NotNull
 	@Column(name = "TYPE_ROOMS")
 	private String type_rooms;
 	
+	@NotNull
 	@Column(name = "NUMBER_ROOM")
 	private int number_room;
 	
+	@NotNull
 	@Column(name = "ADDITIONAL_SERVICE")
 	private String additional_Service;
 	
+	@NotNull
 	@Column(name = "SPENDING_TYPES")
 	private String spending_Types;
+	
 	
 	@Column(name = "NUMBER_PHONE")
 	private int number_phone;
 	
+	@NotNull
 	@Column(name = "PAYMENT")
 	private String payment;
 	
@@ -67,6 +77,7 @@ public class Guests implements Serializable{
 	@Column(name = "AMOUNT_PAYMENT", nullable = false)
 	private BigDecimal amount_payment;
 	
+	@NotNull
 	@Temporal(TemporalType.DATE)
 	@DateTimeFormat(pattern="dd/MM/yyyy") 
 	@Column(name = "DATE" )

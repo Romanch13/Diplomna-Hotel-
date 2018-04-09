@@ -1,0 +1,120 @@
+body {
+		font-family: 'Roboto', semi-bold, sans-serif;
+		-webkit-text-size-adjust: 100%;
+      	-ms-text-size-adjust: 100%;
+      	background-color: #DDD7D7;
+		background-size: 50px 50px;
+		background-image: 
+		linear-gradient(-45deg, transparent 52%, rgba(255,255,255,0.9) 54%, transparent 55%, transparent),
+		linear-gradient(45deg, transparent 52%, rgba(255,255,255,0.6) 54%, transparent 55%, transparent),
+		linear-gradient(-45deg, transparent 50%, rgba(0,0,0,0.1) 52%, transparent 53%, transparent),
+		linear-gradient(45deg, transparent 50%, rgba(0,0,0,0.05) 52%, transparent 53%, transparent);
+		}
+		
+div.h2-zagolovk-first-page{
+	height: 10px;
+	background: radial-gradient(#FBB03B 0%, #FBB03B 50%, #8AD4E1 50%, #8AD4E1 70%, #DDD7D7 70%, #DDD7D7 100%) 0 190px, 
+	radial-gradient(#FBB03B 0%, #FBB03B 50%, #8AD4E1 50%, #8AD4E1 70%, #DDD7D7 70%, #DDD7D7 100%) 0 -10px;
+	background-size: 20px 20px;
+	
+}	
+.zagolovok{
+		font-family: Times, 'Times New Roman', serif;
+		font-size: 50px;
+		font-style: italic;
+}		
+.zagolovok-form{
+	font-family: Times, 'Times New Roman', serif;
+	font-size: 20px;
+	font-style: italic;
+	font-weight: bold;
+}
+tbody.allguestss{
+		font-size: 12px;
+		background-color: white;
+		}
+		a:focus, a:hover { 
+    		text-decoration: none; }
+
+.fixed-table-container tbody td .th-inner, .fixed-table-container thead th .th-inner {
+	padding: 6px; 
+	text-align: center; 
+}
+
+.fixed-table-container thead th .sortable {
+    cursor: pointer;
+    background-position: right;
+    background-repeat: no-repeat;
+    padding-right: 16px;}
+ 
+table.allguestss1 {
+	text-align: center!important;
+	
+}
+th:first-child, td:first-child {
+	text-align: left;
+}
+
+thead.podpis{
+	background:  #d1c8d5;
+	color: black;
+	padding: 10px 20px;
+	font-weight: bold;
+	font-weight: bold;	
+	font-size: 12px;
+}
+
+tr.dani:hover {
+	background: #F8E391!important;	
+}
+
+.fixed-table-body {
+    overflow-x: auto;
+    overflow-y: 100%;
+    height: 100%;
+    min-width: 100%;
+}
+
+.btn-dark {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;}
+    
+.btn-dark:hover {
+    color: #fff;
+    background-color: #23272b;
+    border-color: #1d2124;
+}
+
+table.reg tbody tr td  {
+	padding: 2px;
+}
+table.reg1 tbody tr td  {
+	padding: 2px;
+}
+table.reg tbody tr td input{
+	border-width: 3px;
+}
+
+tr.reg_0 td input{
+	width: 220px;
+	height: auto;
+}
+tr.reg_1 td input{
+	width: 258px;
+	height: auto;
+}
+.error {
+		color: #ff0000;
+		font-size: 10px;
+	}
+a.back-list{
+	color: white;
+}
+div.center{
+	text-align: center;
+}
+.success-people{
+	text-align: center;
+	padding: 300px 0 100px 0;
+}
