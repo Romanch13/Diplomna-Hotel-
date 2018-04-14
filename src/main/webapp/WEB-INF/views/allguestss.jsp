@@ -14,20 +14,32 @@
     <%@include file="/resources/css/bootstrap.min.css"%>
     <%@include file="/resources/css/MyCSS.css"%>
 	</style>
-	<title>Дипломна Гончара Романа</title>
-
-	
+	<script type="text/javascript">
+	 <%@include file="/resources/js/MyJs.js"%>
+	</script>
+	<title>Гончара Романа</title>
 </head>
     
 <div class="h2-zagolovk-first-page"></div>
 <body>
-<h2 align="center" class="zagolovok">Список Гостей</h2>
-     	<table data-toggle="table" class="allguestss1">
+ <h2 align="center" class="zagolovok">Список Гостей</h2>
+
+<div class="fixed-table-toolbar">
+	<div class="fsearch pull-left search">
+	<table>
+	 <tr class="search-tabl">
+	 <td><label >Знайти клієнта:</label></td> 
+	 <td><input type="text" class="search form-control" placeholder="Введіть дані"></td>
+	 </tr></table>
+	</div>
+</div>
+<span class="counter pull-right"></span>
+     	<table data-toggle="table" class="allguestss1"  > 
            <thead class="podpis">
             <tr>
-             <th  data-sortable="true">Прізвище</th><th data-sortable="true">Ім'я</th><th data-sortable="true">Тип номеру</th><th data-sortable="true">Номер кімнати</th><th  data-sortable="true"> Додаткові послуги</th><th data-sortable="true">Типи витрат</th><th>Номер телефону</th><th>Тип Оплати</th><th>Тип картки</th><th>Номер картки</th><th>Сума оплати</th><th data-sortable="true"> Дата</th><th>Змінити дані</th><th>Видалити</th>
-    </tr>
-    </thead>
+             <th  data-sortable="true">Прізвище</th><th data-sortable="true">Ім'я</th><th data-sortable="true">Тип номеру</th><th data-sortable="true">Номер кімнати</th><th  data-sortable="true"> Додаткові послуги</th><th data-sortable="true">Типи витрат</th><th>Номер телефону</th><th>Тип Оплати</th><th>Тип картки</th><th>Номер картки</th><th>Сума оплати UAH</th><th data-sortable="true"> Дата</th><th>Змінити дані</th><th>Видалити</th>
+   		
+  </thead>
     <tbody class="allguestss">
         <c:forEach items="${guests}" var="guests">
             <tr class="dani">
@@ -48,11 +60,14 @@
             </tr>    
         </c:forEach>
         </tbody>
+       
     </table>
 
     <br/>
     <div class="container-fluid">
     <a href="<c:url value='/new' />"><button class="btn btn-dark">Додати нового гостя</button></a>
     </div>
+ 
+
 </body>
 </html>

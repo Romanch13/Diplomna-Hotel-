@@ -32,8 +32,7 @@
        <div class="container-fluid">
        <div class="col-xs-12 col-md-4 ">
             <table class="reg"><!-- ZAGOLOVOk -->
-            <div align="center" class="zagolovok-form">Введіть Дані</div>
-            <br>
+            <div align="center" class="zagolovok-form">Введіть Дані
             <tr>
                 <td><label for="surname">Прізвище: </label> </td>
                 <td><form:input path="surname" id="surname" /></td>
@@ -49,13 +48,12 @@
                 <td><form:input path="number_phone" number="number_phone" /></td>
                 <td><form:errors path="number_phone" cssClass="error"/></td>
             </tr>
+              </div>
             </table>
             
             <table class="reg">
-             <br/><!-- ZAGOLOVOk -->
-            <div align="center" class="zagolovok-form">Виберіть Тип та Номер кімнати</div>
-            <br/>
-            
+             <!-- ZAGOLOVOk -->
+            <div align="center" class="zagolovok-form">Виберіть Тип та Номер кімнати
             <tr class="reg_0">
                 <td><label for="type_rooms">Тип кімнати: </label> </td>
                 <td><form:input path="type_rooms" id="type_rooms"/></td>
@@ -65,14 +63,14 @@
                 <td><label for="number_room">Номер кімнати: </label> </td>
                 <td><form:input path="number_room" id="number_room"/></td>
                 <td><form:errors path="number_room" cssClass="error"/></td>
-            </tr >
+            </tr>
+            </div>
               </table>
             </div>  
             
  <div class="col-xs-12 col-md-4 ">
   		<table class="reg"><!-- ZAGOLOVOk -->
-            <div align="center" class="zagolovok-form">Виберіть Послуги та Типи витрат</div>
-            <br>
+            <div align="center" class="zagolovok-form">Виберіть Послуги та Типи витрат
             <tr>
                 <td><label for="additional_Service">Додаткові послуги: </label> </td>
                 <td><form:input path="additional_Service" id="additional_Service"/></td>
@@ -84,13 +82,12 @@
                 <td><form:input path="spending_Types" id="spending_Types"/></td>
                 <td><form:errors path="spending_Types" cssClass="error"/></td>
             </tr>
+             </div>
              </table>
-             
-             <table class="reg">
-              <br/><!-- ZAGOLOVOk -->
-             <div align="center" class="zagolovok-form">Виберіть Тип оплати</div>
-            <br/>
-            
+            	
+             <table class="reg1">
+              <!-- ZAGOLOVOk -->
+             <div align="center" class="zagolovok-form1">Виберіть Тип оплати
             <tr class="reg_1">
                 <td><label for="payment">Тип Оплати: </label> </td>
                 <td><form:input path="payment" id="payment" /></td>
@@ -101,15 +98,14 @@
                 <td><form:input path="type_cards" id="type_cards"/></td>
                 <td><form:errors path="type_cards" cssClass="error"/></td>
             </tr>
+             </div>
             </table>
             </div>
-            
+           
             <div class="col-xs-12 col-md-4 ">
-            <!-- ZAGOLOVOk -->
-             <div align="center" class="zagolovok-form">Введіть номер картки та сумму оплати</div>
-            <br>
-            
             <table class="reg">
+                 <!-- ZAGOLOVOk -->
+             <div align="center" class="zagolovok-form nowrap">Введіть Hомер картки та Cумму оплати
             <tr>
                 <td><label for="number_cards">Номер картки: </label> </td>
                 <td><form:input path="number_cards" id="number_cards"/></td>
@@ -125,12 +121,14 @@
                 <td><form:input path="date" id="date"/></td>
                 <td><form:errors path="date" cssClass="error"/></td>
             </tr>
+            </div>
           </table>
        </div>
     </div>
     <br>
-    <div class="col-xs-12 col-md-12 col-md-push-5">
-   <div class="container-fluid">
+    <div class="col-xs-12 col-md-12">
+   <div class="container-fluid center-button">
+   <br>
             <tr>
                 <td colspan="3">
                     <c:choose>

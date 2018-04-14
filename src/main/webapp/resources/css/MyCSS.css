@@ -1,3 +1,72 @@
+/* Table*/
+tbody.allguestss{
+		font-size: 12px;
+		background-color: white;
+		}
+		a:focus, a:hover { 
+    		text-decoration: none; }
+
+.fixed-table-container tbody td .th-inner, .fixed-table-container thead th .th-inner {
+	padding: 6px; 
+	text-align: center; 
+}
+
+.fixed-table-container thead th .sortable {
+    cursor: pointer;
+    background-position: right;
+    background-repeat: no-repeat;
+    padding-right: 16px;}
+table.allguestss1 {
+	text-align: center!important;
+	
+}
+.fixed-table-body {
+    overflow-x: auto;
+    overflow-y: 100%;
+    height: 100%;
+    min-width: 100%;
+}
+table.reg tbody tr td  {
+	padding: 2px;}
+	input{
+	border-width: 3px;
+	}
+.reg1  {
+	margin-top: 0px;} 
+	tbody tr td  {
+		padding: 2px;}
+		input {
+			border-width: 3px;}
+			
+tr.reg_0 td input{
+	width: 220px;
+	height: auto;
+}
+tr.reg_1 td input{
+	width: 258px;
+	height: auto;
+}
+
+th:first-child, td:first-child {
+	text-align: left;
+}
+.search-tabl td label {
+	margin-bottom: 0px;
+}
+/* Search */
+.fixed-table-toolbar .fsearch   {
+	margin: 10px;
+	
+}
+.fixed-table-toolbar .fsearch .form-control:focus {
+    border-color: #f33131;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px #f90101;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(249, 8, 8, 0.6);
+}
+
+
+/* Body*/
 body {
 		font-family: 'Roboto', semi-bold, sans-serif;
 		-webkit-text-size-adjust: 100%;
@@ -17,7 +86,10 @@ div.h2-zagolovk-first-page{
 	radial-gradient(#FBB03B 0%, #FBB03B 50%, #8AD4E1 50%, #8AD4E1 70%, #DDD7D7 70%, #DDD7D7 100%) 0 -10px;
 	background-size: 20px 20px;
 	
-}	
+}
+
+
+/* Zagolovki*/
 .zagolovok{
 		font-family: Times, 'Times New Roman', serif;
 		font-size: 50px;
@@ -28,33 +100,20 @@ div.h2-zagolovk-first-page{
 	font-size: 20px;
 	font-style: italic;
 	font-weight: bold;
+	padding: 20px 0 20px 0;
 }
-tbody.allguestss{
-		font-size: 12px;
-		background-color: white;
-		}
-		a:focus, a:hover { 
-    		text-decoration: none; }
-
-.fixed-table-container tbody td .th-inner, .fixed-table-container thead th .th-inner {
-	padding: 6px; 
-	text-align: center; 
-}
-
-.fixed-table-container thead th .sortable {
-    cursor: pointer;
-    background-position: right;
-    background-repeat: no-repeat;
-    padding-right: 16px;}
- 
-table.allguestss1 {
-	text-align: center!important;
+.zagolovok-form1{
+	font-family: Times, 'Times New Roman', serif;
+	font-size: 20px;
+	font-style: italic;
+	font-weight: bold;
+	padding: 20px 0 20px 0;
+	margin-top: 30px;
 	
 }
-th:first-child, td:first-child {
-	text-align: left;
-}
 
+
+/* Podpisi */
 thead.podpis{
 	background:  #d1c8d5;
 	color: black;
@@ -68,13 +127,8 @@ tr.dani:hover {
 	background: #F8E391!important;	
 }
 
-.fixed-table-body {
-    overflow-x: auto;
-    overflow-y: 100%;
-    height: 100%;
-    min-width: 100%;
-}
 
+/* Button */
 .btn-dark {
     color: #fff;
     background-color: #343a40;
@@ -86,23 +140,15 @@ tr.dani:hover {
     border-color: #1d2124;
 }
 
-table.reg tbody tr td  {
-	padding: 2px;
+div.center{
+	text-align: center;
 }
-table.reg1 tbody tr td  {
-	padding: 2px;
+.success-people{
+	text-align: center;
+	padding: 300px 0 100px 0;
 }
-table.reg tbody tr td input{
-	border-width: 3px;
-}
-
-tr.reg_0 td input{
-	width: 220px;
-	height: auto;
-}
-tr.reg_1 td input{
-	width: 258px;
-	height: auto;
+.center-button{
+	text-align: center;
 }
 .error {
 		color: #ff0000;
@@ -110,11 +156,4 @@ tr.reg_1 td input{
 	}
 a.back-list{
 	color: white;
-}
-div.center{
-	text-align: center;
-}
-.success-people{
-	text-align: center;
-	padding: 300px 0 100px 0;
 }

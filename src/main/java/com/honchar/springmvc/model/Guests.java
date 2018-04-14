@@ -60,7 +60,7 @@ public class Guests implements Serializable{
 	
 	
 	@Column(name = "NUMBER_PHONE")
-	private int number_phone;
+	private String number_phone;
 	
 	@NotNull
 	@Column(name = "PAYMENT")
@@ -70,7 +70,7 @@ public class Guests implements Serializable{
 	private String type_cards;
 	
 	@Column(name = "NUMBER_CARDS")
-	private int number_cards;
+	private String number_cards;
 	
 	@NotNull
 	@Digits(integer=8, fraction=2)
@@ -103,8 +103,8 @@ public class Guests implements Serializable{
 	}
 	
 	public Guests(String surname, String name, String type_rooms, int number_room, String additional_Service, 
-			String spending_Types, int number_phone,String payment,String type_cards,
-			int number_cards, BigDecimal amount_payment, Date date) {
+			String spending_Types, String number_phone,String payment,String type_cards,
+			String number_cards, BigDecimal amount_payment, Date date) {
 		this.surname = surname;
 		this.name = name;
 		this.type_rooms = type_rooms;
@@ -168,10 +168,10 @@ public class Guests implements Serializable{
 		this.spending_Types =  spending_Types;
 	}
 	
-	public int getNumber_phone() {
+	public String getNumber_phone() {
 		return number_phone;
 	}
-	public void setNumber_phone(int number_phone) {
+	public void setNumber_phone(String number_phone) {
 		this.number_phone = number_phone;
 	}
 	
@@ -189,10 +189,10 @@ public class Guests implements Serializable{
 		this.type_cards = type_cards;
 	}
 	
-	public int getNumber_cards() {
+	public String getNumber_cards() {
 		return number_cards;
 	}
-	public void setNumber_cards(int number_cards) {
+	public void setNumber_cards(String number_cards) {
 		this.number_cards = number_cards;
 	}
 	
