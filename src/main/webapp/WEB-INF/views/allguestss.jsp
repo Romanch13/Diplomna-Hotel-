@@ -22,7 +22,7 @@
     
 <div class="h2-zagolovk-first-page"></div>
 <body>
- <h2 align="center" class="zagolovok">Список Гостей</h2>
+ <h2 align="center" class="zagolovok">Список Клієнтів</h2>
 
 <div class="fixed-table-toolbar">
 	<div class="fsearch pull-left search">
@@ -34,10 +34,10 @@
 	</div>
 </div>
 <span class="counter pull-right"></span>
-     	<table data-toggle="table" class="allguestss1"  > 
+     	<table data-toggle="table" class="allguestss1" data-pagination="true"  > 
            <thead class="podpis">
             <tr>
-             <th  data-sortable="true">Прізвище</th><th data-sortable="true">Ім'я</th><th data-sortable="true">Тип номеру</th><th data-sortable="true">Номер кімнати</th><th  data-sortable="true"> Додаткові послуги</th><th data-sortable="true">Типи витрат</th><th>Номер телефону</th><th>Тип Оплати</th><th>Тип картки</th><th>Номер картки</th><th>Сума оплати UAH</th><th data-sortable="true"> Дата</th><th>Змінити дані</th><th>Видалити</th>
+             <th  data-sortable="true">Прізвище</th><th data-sortable="true">Ім'я</th><th data-sortable="true">Тип номеру</th><th data-sortable="true">Номер кімнати</th><th  data-sortable="true"> Доп. послуги</th><th data-sortable="true">Типи витрат</th><th>Номер телефону</th><th>Тип Оплати</th><th>Тип картки</th><th>Номер картки</th><th >Сума оплати</th><th data-sortable="true">Дата</th><th>Змінити дані</th><th>Видалити</th>
    		
   </thead>
     <tbody class="allguestss">
@@ -55,8 +55,8 @@
             <td>${guests.number_cards}</td>
             <td>${guests.amount_payment}</td>
             <td>${guests.date}</td>
-            <td><a href="<c:url value='/edit-${guests.id}-guests' />"><button class="btn btn-success btn-sm">Редагувати</button></a></td>
-            <td><a href="<c:url value='/delete-${guests.id}-guests' />"><button class="btn btn-danger btn-sm">Видалити</button></a></td>
+            <td><a  href="<c:url value='/edit-${guests.id}-guests' />"><button class="btn-m btn-success btn-sm">Редагувати</button></a></td>
+            <td><a href="<c:url value='/delete-${guests.id}-guests' />"><button class="btn-m btn-danger btn-sm">Видалити</button></a></td>
             </tr>    
         </c:forEach>
         </tbody>
@@ -65,7 +65,9 @@
 
     <br/>
     <div class="container-fluid">
+    <div class="mybut">
     <a href="<c:url value='/new' />"><button class="btn btn-dark">Додати нового гостя</button></a>
+    </div>
     </div>
  
 

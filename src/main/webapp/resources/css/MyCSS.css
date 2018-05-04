@@ -58,6 +58,11 @@ th:first-child, td:first-child {
 	margin: 10px;
 	
 }
+tr td input:focus{
+	border-color: none;
+    outline: 0;
+   
+}
 .fixed-table-toolbar .fsearch .form-control:focus {
     border-color: #f33131;
     outline: 0;
@@ -119,7 +124,6 @@ thead.podpis{
 	color: black;
 	padding: 10px 20px;
 	font-weight: bold;
-	font-weight: bold;	
 	font-size: 12px;
 }
 
@@ -130,16 +134,20 @@ tr.dani:hover {
 
 /* Button */
 .btn-dark {
-    color: #fff;
+    color: #f9f6f6!important;
     background-color: #343a40;
-    border-color: #343a40;}
+    border-color: #343a40;
+   }
     
 .btn-dark:hover {
-    color: #fff;
+   
     background-color: #23272b;
     border-color: #1d2124;
 }
-
+.mybut{
+	margin-top: -20px;
+	margin-bottom: 20px
+}
 div.center{
 	text-align: center;
 }
@@ -156,4 +164,75 @@ div.center{
 	}
 a.back-list{
 	color: white;
+}
+.btn-m {
+    display: inline-block;
+    padding: 10px 6px;
+    margin: 3px 0px;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus{
+	outline: none;
+}
+/* pagination */
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover{
+	z-index: 3;
+    color: #fff;
+    cursor: default;
+    background-color: #fd3029;
+    border-color: #fd3029;
+}
+.pagination>li>a, .pagination>li>span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1;
+    color: #23272b;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+.pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover {
+    z-index: 2;
+    color: #000000;
+    background-color: #eee;
+    } 
+    
+/* dropmanu-pag  */ 
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #606263;
+    outline: 0;}  
+    
+    
+/* register     */
+tbody.regestire{
+		font-size: 12px;
+		background-color: white;
+		text-align: center;
+		
+		}
+		a:focus, a:hover { 
+    		text-decoration: none; }
+
+.tabless {
+	margin: 30px 0px;
 }

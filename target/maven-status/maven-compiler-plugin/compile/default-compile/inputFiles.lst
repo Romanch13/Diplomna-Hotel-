@@ -2,6 +2,7 @@ E:\Diplom\SpringHibernateExample1\SpringHibernateExample1\src\main\java\com\honc
 E:\Diplom\SpringHibernateExample1\SpringHibernateExample1\src\main\java\com\honchar\springmvc\model\spending_types.java
 E:\Diplom\SpringHibernateExample1\SpringHibernateExample1\src\main\java\com\honchar\springmvc\model\type_of_cards.java
 E:\Diplom\SpringHibernateExample1\SpringHibernateExample1\src\main\java\com\honchar\springmvc\model\types_of_rooms.java
+E:\Diplom\SpringHibernateExample1\SpringHibernateExample1\src\main\java\com\honchar\springmvc\dao\AddServiceDao.java
 E:\Diplom\SpringHibernateExample1\SpringHibernateExample1\src\main\java\com\honchar\springmvc\configuration\EncodingFilter.java
 E:\Diplom\SpringHibernateExample1\SpringHibernateExample1\src\main\java\com\honchar\springmvc\dao\GuestsDao1.java
 E:\Diplom\SpringHibernateExample1\SpringHibernateExample1\src\main\java\com\honchar\springmvc\dao\GuestsDaoImpl1.java
@@ -11,6 +12,7 @@ E:\Diplom\SpringHibernateExample1\SpringHibernateExample1\src\main\java\com\honc
 E:\Diplom\SpringHibernateExample1\SpringHibernateExample1\src\main\java\com\honchar\springmvc\model\Guests.java
 E:\Diplom\SpringHibernateExample1\SpringHibernateExample1\src\main\java\com\honchar\springmvc\configuration\HibernateConfiguration.java
 E:\Diplom\SpringHibernateExample1\SpringHibernateExample1\src\main\java\com\honchar\springmvc\configuration\AppInitializer.java
+E:\Diplom\SpringHibernateExample1\SpringHibernateExample1\src\main\java\com\honchar\springmvc\dao\AddServiceDaoImpl.java
 E:\Diplom\SpringHibernateExample1\SpringHibernateExample1\src\main\java\com\honchar\springmvc\controller\AppController.java
 E:\Diplom\SpringHibernateExample1\SpringHibernateExample1\src\main\java\com\honchar\springmvc\service\GuestsService1.java
 E:\Diplom\SpringHibernateExample1\SpringHibernateExample1\src\main\java\com\honchar\springmvc\configuration\AppConfig.java

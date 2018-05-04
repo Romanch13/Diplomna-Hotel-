@@ -2,7 +2,7 @@
     pageEncoding="utf-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
+
 
 <html>
 
@@ -18,14 +18,14 @@
     <%@include file="/resources/css/MyCSS.css"%>
 	</style>
 	
-	<title>Реєстрація Гостей</title>
+	<title>Реєстрація Клієнтів</title>
 	
 	
 </head>
 <div class="h2-zagolovk-first-page"></div>
 <body>
 
-	 <div align="center" class="zagolovok">Реєстрація Гостей</div>
+	 <div align="center" class="zagolovok">Реєстрація Клієнтів</div>
  	<br>
     <form:form method="POST" modelAttribute="guests">
         <form:input type="hidden" path="id" id="id"/>
@@ -55,8 +55,8 @@
              <!-- ZAGOLOVOk -->
             <div align="center" class="zagolovok-form">Виберіть Тип та Номер кімнати
             <tr class="reg_0">
-                <td><label for="type_rooms">Тип кімнати: </label> </td>
-                <td><form:input path="type_rooms" id="type_rooms"/></td>
+                <td><label for="type_rooms">Тип кімнати:</label></td>
+                <td><form:input path="type_rooms" id="type_rooms"/>
                 <td><form:errors path="type_rooms" cssClass="error"/></td>
             </tr>
             <tr class="reg_0">
@@ -133,7 +133,7 @@
                 <td colspan="3">
                     <c:choose>
                         <c:when test="${edit}">
-                            <input type="submit" value="Update" class="btn btn-primary"/>
+                            <input type="submit" value="Оновити" class="btn btn-primary"/>
                         </c:when>
                         <c:otherwise >
                             <input type="submit" value="Зареєструвати" class="btn btn-success"/>
@@ -144,10 +144,131 @@
        </div>
      </div>
     </form:form>
-    <div class="col-xs-12 col-md-12">
+   
     <div class="container-fluid">
     <button class="btn btn-Info"><a class="back-list" href="<c:url value='/list' />" >Повернутися до Списку з гостями</a></button>
     </div>
+    
+  <div class="tabless">
+   <div class="col-xs-4 col-md-4">
+    <table data-toggle="table" class="regist" > 
+           <thead class="podpis">
+            <tr>
+             <th  data-sortable="true">Типи витрат</th><th data-sortable="true">Ціна UAH</th></tr>
+  </thead>
+    <tbody class="regestire">
+          <tr class="dani1">
+           <td>Пляжна парасолька</td>
+  			<td>70</td>
+          </tr>  
+          <tr class="dani1">
+           <td>Аренда велосипеду</td>
+  			<td>100</td>
+          </tr> 
+          <tr class="dani1">
+           <td>Уроки гольфу</td>
+  			<td>150</td>
+          </tr> 
+          <tr class="dani1">
+           <td>Гольф, 18 лунок</td>
+  			<td>300</td>
+          </tr> 
+          <tr class="dani1">
+           <td>Гольф, 9 лунок</td>
+  			<td>250</td>
+          </tr> 
+          <tr class="dani1">
+           <td>Рушник для басейну</td>
+  			<td>50</td>
+          </tr> 
+          <tr class="dani1">
+           <td>Тенісний корт</td>
+  			<td>400</td>
+          </tr> 
+          <tr class="dani1">
+           <td>Уроки тенісу</td>
+  			<td>250</td>
+          </tr>   
+           <tr class="dani1">
+           <td>Спортивний комплекс</td>
+  			<td>200</td>
+          </tr>  
+           <tr class="dani1">
+           <td>Масаж</td>
+  			<td>150</td>
+          </tr>  
+           <tr class="dani1">
+           <td>Сауна</td>
+  			<td>100</td>
+          </tr>  
+        </tbody> 
+    </table>
     </div>
+    <div class="col-xs-4 col-md-4">
+    <table data-toggle="table" class="regist"> 
+           <thead class="podpis">
+            <tr>
+             <th  data-sortable="true">Типи номерів </th><th data-sortable="true">Ціна UAH</th></tr>
+  </thead>
+     <tbody class="regestire">
+         <tr class="dani1">
+           <td>Президенський</td>
+  			<td>2500</td>
+          </tr> 
+          <tr class="dani1">
+           <td>Стандартний</td>
+  			<td>600</td>
+          </tr> 
+          <tr class="dani1">
+           <td>Люкс</td>
+  			<td>1300</td>
+  			</tr>
+  			 <tr class="dani1">
+           <td>Напів-люкс</td>
+  			<td>1100</td>
+          </tr>  
+           <tr class="dani1">
+           <td>Економ</td>
+  			<td>450</td>
+          </tr>  
+          <tr class="dani1">
+           <td>Преміум клас</td>
+  			<td>1600</td>
+          </tr>   
+             <tr class="dani1">
+           <td>Duplex-двоповерховий</td>
+  			<td>2000</td>
+          </tr>  
+           <tr class="dani1">
+           <td>Сімейний</td>
+  			<td>1000</td>
+          </tr>  
+        </tbody> 
+    </table>
+    </div>
+    <div class="col-xs-4 col-md-4">
+    <table data-toggle="table" class="regist" > 
+           <thead class="podpis">
+            <tr>
+             <th  data-sortable="true">Доп. послуги</th><th data-sortable="true">Ціна UAH</th></tr>
+  </thead>
+     <tbody class="regestire">
+          <tr class="dani1">
+           <td>Спутникове телебачення</td>
+  			<td>200</td>
+          </tr> 
+          <tr class="dani1">
+           <td>Мінібар</td>
+  			<td>300</td>
+          </tr> 
+          <tr class="dani1">
+           <td>Доставка сніданку в номер</td>
+  			<td>400</td>
+          </tr> 
+             
+        </tbody> 
+    </table>
+    </div>
+   </div>
 </body>
 </html>
