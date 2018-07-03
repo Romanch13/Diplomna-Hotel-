@@ -22,19 +22,27 @@ table.allguestss1 {
 }
 .fixed-table-body {
     overflow-x: auto;
-    overflow-y: 100%;
-    height: 100%;
-    min-width: 100%;
+    overflow-y: auto;
+    height: 100%;  
 }
-table.reg tbody tr td  {
-	padding: 2px;}
+.tabless{
+	height: 450px;
+}
+.reg tbody tr td  {
+	padding-top: 2px;
+    padding-bottom: 2px;}
+    label{
+   			margin-bottom: 0px;}
 	input{
 	border-width: 3px;
 	}
 .reg1  {
 	margin-top: 0px;} 
 	tbody tr td  {
-		padding: 2px;}
+		padding-top: 2px;
+   		padding-bottom: 2px;}
+   		label{
+   			margin-bottom: 0px;}
 		input {
 			border-width: 3px;}
 			
@@ -42,10 +50,19 @@ tr.reg_0 td input{
 	width: 220px;
 	height: auto;
 }
-tr.reg_1 td input{
-	width: 258px;
-	height: auto;
+tr.reg_1 {
+	line-height: 1.7;}
+	.spusok-cards{
+		width: 220px;
+		height: 26px;
+		border-width: 2px;
+    	border-color: #00000047;
 }
+.spusok-add{
+	width: 225px;
+	height: 26px;
+	border-width: 2px;
+    border-color: #00000047;}
 
 th:first-child, td:first-child {
 	text-align: left;
@@ -59,6 +76,11 @@ th:first-child, td:first-child {
 	
 }
 tr td input:focus{
+	border-color: none;
+    outline: 0;
+   
+}
+tr td select:focus{
 	border-color: none;
     outline: 0;
    
@@ -138,7 +160,13 @@ tr.dani:hover {
     background-color: #343a40;
     border-color: #343a40;
    }
-    
+.btn-primary, .btn-success{
+	margin-top: 50px;
+}
+.btn-Info{
+	margin-top: 20px;
+    margin-bottom: 20px;
+}    
 .btn-dark:hover {
    
     background-color: #23272b;

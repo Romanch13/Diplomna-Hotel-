@@ -32,7 +32,7 @@
        <div class="container-fluid">
        <div class="col-xs-12 col-md-4 ">
             <table class="reg"><!-- ZAGOLOVOk -->
-            <div align="center" class="zagolovok-form">Введіть Дані
+            <div align="center" class="zagolovok-form">Введіть Дані</div>
             <tr>
                 <td><label for="surname">Прізвище: </label> </td>
                 <td><form:input path="surname" id="surname" /></td>
@@ -48,15 +48,25 @@
                 <td><form:input path="number_phone" number="number_phone" /></td>
                 <td><form:errors path="number_phone" cssClass="error"/></td>
             </tr>
-              </div>
+              
             </table>
             
             <table class="reg">
              <!-- ZAGOLOVOk -->
-            <div align="center" class="zagolovok-form">Виберіть Тип та Номер кімнати
+            <div align="center" class="zagolovok-form">Виберіть Тип та Номер кімнати</div>
             <tr class="reg_0">
                 <td><label for="type_rooms">Тип кімнати:</label></td>
-                <td><form:input path="type_rooms" id="type_rooms"/>
+                <%-- <td><form:input path="type_rooms" id="type_rooms"/> --%>
+                <td><form:select path="type_rooms" id="type_rooms" class="spusok-cards" >
+                <form:option value="Стандартний" label="Стандартний" />
+                <form:option value="Президенський" label="Президенський" />
+				<form:option value="Люкс" label="Люкс" />
+				<form:option value="Напів-люкс" label="Напів-люкс" />
+				<form:option value="Економ" label="Економ" />
+				<form:option value="Преміум клас" label="Преміум клас" />
+				<form:option value="Duplex-двоповерховий" label="Duplex-двоповерховий" />
+				<form:option value="Сімейний" label="Сімейний" />
+			</form:select></td>
                 <td><form:errors path="type_rooms" cssClass="error"/></td>
             </tr>
             <tr class="reg_0">
@@ -64,41 +74,66 @@
                 <td><form:input path="number_room" id="number_room"/></td>
                 <td><form:errors path="number_room" cssClass="error"/></td>
             </tr>
-            </div>
+            
               </table>
             </div>  
             
  <div class="col-xs-12 col-md-4 ">
   		<table class="reg"><!-- ZAGOLOVOk -->
-            <div align="center" class="zagolovok-form">Виберіть Послуги та Типи витрат
+            <div align="center" class="zagolovok-form">Виберіть Послуги та Типи витрат</div>
             <tr>
-                <td><label for="additional_Service">Додаткові послуги: </label> </td>
-                <td><form:input path="additional_Service" id="additional_Service"/></td>
+                <td><label for="additional_Service">Додаткові послуги: </label></td>
+                <%-- <td><form:input path="additional_Service" id="additional_Service"/></td> --%>
+               	<td><form:select path="additional_Service" id="additional_Service" class="spusok-add">
+               	<form:option value="Немає" label="Немає" />
+                <form:option value="Спутникове телебачення" label="Спутникове телебачення" />
+				<form:option value="Мінібар" label="Мінібар" />
+				<form:option value="Доставка сніданку в номер" label="Доставка сніданку в номер" />
+			</form:select></td>
                 <td><form:errors path="additional_Service" cssClass="error"/></td>
             </tr>
     
             <tr>
                 <td><label for="spending_Types">Типи витрат: </label> </td>
-                <td><form:input path="spending_Types" id="spending_Types"/></td>
+                <%-- <td><form:input path="spending_Types" id="spending_Types"/></td> --%>
+                <td><form:select path="spending_Types" id="spending_Types" class="spusok-add">
+                <form:option value="Немає" label="Немає" />
+                <form:option value="Пляжна парасолька" label="Пляжна парасолька" />
+				<form:option value="Аренда велосипеду" label="Аренда велосипеду" />
+				<form:option value="Уроки гольфу" label="Уроки гольфу" />
+				<form:option value="Гольф, 18 лунок" label="Гольф, 18 лунок" />
+				<form:option value="Гольф, 9 лунок" label="Гольф, 9 лунок" />
+				<form:option value="Рушник для басейну" label="Рушник для басейну" />
+				<form:option value="Тенісний корт" label="Тенісний корт" />
+				<form:option value="Уроки тенісу" label="Уроки тенісу" />
+				<form:option value="Спортивний комплекс" label="Спортивний комплекс" />
+				<form:option value="Масаж" label="Масаж" />
+				<form:option value="Сауна" label="Сауна" />
+			</form:select></td>
                 <td><form:errors path="spending_Types" cssClass="error"/></td>
             </tr>
-             </div>
              </table>
-            	
              <table class="reg1">
               <!-- ZAGOLOVOk -->
-             <div align="center" class="zagolovok-form1">Виберіть Тип оплати
+             <div align="center" class="zagolovok-form1">Виберіть Тип оплати </div>
             <tr class="reg_1">
                 <td><label for="payment">Тип Оплати: </label> </td>
-                <td><form:input path="payment" id="payment" /></td>
+			<td><form:radiobutton path="payment" id="payment" value="Готівкою" label="Готівкою" />
+                <form:radiobutton path="payment" id="payment" value="Карткою" label="Карткою"/></td>
                 <td><form:errors path="payment" cssClass="error"/></td>
             </tr>
              <tr class="reg_1">
                 <td><label for="type_cards">Тип Картки: </label> </td>
-                <td><form:input path="type_cards" id="type_cards"/></td>
-                <td><form:errors path="type_cards" cssClass="error"/></td>
+               <%--  <td><form:input path="type_cards" id="type_cards"/></td> --%>
+                <td><form:select path="type_cards" id="type_cards" class="spusok-cards">
+                <form:option value="Немає" label="Немає" />
+				<form:option value="VISA" label="VISA" />
+				<form:option value="MasterCard" label="MasterCard" />
+				<form:option value="Ukrainian Express" label="Ukrainian Express" />
+			</form:select></td>
+			<td><form:errors path="type_cards" cssClass="error"/></td>
             </tr>
-             </div>
+            
             </table>
             </div>
            
@@ -121,13 +156,12 @@
                 <td><form:input path="date" id="date"/></td>
                 <td><form:errors path="date" cssClass="error"/></td>
             </tr>
-            </div>
           </table>
        </div>
     </div>
     <br>
     <div class="col-xs-12 col-md-12">
-   <div class="container-fluid center-button">
+   <div class="container-fluid center">
    <br>
             <tr>
                 <td colspan="3">
